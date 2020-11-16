@@ -22,3 +22,13 @@ spec:
             name: h4cksh-web
             port:
               number: 8000
+  - host: www.h4ck.sh
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: h4cksh-web
+            port:
+              number: 8000
