@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: h4cksh-web
+  labels:
+    app: h4cksh-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: h4cksh-web
+  template:
+    metadata:
+      labels:
+        app: h4cksh-web
+    spec:
+      containers:
+        - image: registry.digitalocean.com/django-backend/h4cksh-web:latest
+          name: h4cksh-web
+          tty: true 
+          stdin: true
+          envFrom:
+          - secretRef:
+              name: h4cksh-web-secret
+          - configMapRef:
+              name: h4cksh-web-config
+          ports:
+          - containerPort: 8000
+            name: gunicorn

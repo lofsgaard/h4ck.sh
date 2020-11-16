@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: h4cksh-web-config
+data:
+  TEST: "123"
+  ALLOWED_HOSTS: "*"

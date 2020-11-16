@@ -103,6 +103,7 @@ celerybeat.pid
 
 # Environments
 .env
+.env.Prod
 .venv
 env/
 venv/
@@ -127,3 +128,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+staticfiles/
+
+notes.txt
+
+#yaml
+yaml/h4cksh-web-secrets

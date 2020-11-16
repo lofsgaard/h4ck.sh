@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: h4cksh-web
+  labels:
+    app: h4cksh-web
+spec:
+  type: ClusterIP
+  selector:
+    app: h4cksh-web
+  ports:
+    - port: 8000
+      targetPort: 8000
