@@ -134,4 +134,4 @@ staticfiles/
 notes.txt
 
 #yaml
-yaml/h4cksh-web-secrets
+k8s/h4cksh-web-secrets
